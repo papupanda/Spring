@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        <!-- dependency class -->
+         <bean id="disel" class="com.nt.strategy.Disel_engine"/>
+         <bean id="water" class="com.nt.strategy.Water_engine"/>
+         <bean id="petrol" class="com.nt.strategy.Petrol_engine"/>
+        <!-- target class -->
+        <bean id="factory" class="com.nt.strategy.Vehicle">
+        <constructor-arg ref="petrol"/>
+        </bean>
+        </beans>

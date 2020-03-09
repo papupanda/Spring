@@ -1,0 +1,21 @@
+> create table student_info(sid number(10),sname varchar2(20),age number(10),fathername varchar2(20),adharno number(10),address varchar2(20),phonenumber number(10),batch varchar2(20));
+
+Table created.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> desc student_info;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SID                                                NUMBER(10)
+ SNAME                                              VARCHAR2(20)
+ AGE                                                NUMBER(10)
+ FATHERNAME                                         VARCHAR2(20)
+ ADHARNO                                            NUMBER(10)
+ ADDRESS                                            VARCHAR2(20)
+ PHONENUMBER                                        NUMBER(10)
+ BATCH                                              VARCHAR2(20)
+
+SQL>

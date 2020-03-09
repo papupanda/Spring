@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<!-- injecting hikari datasource -->
+<bean id="hcp" class="com.zaxxer.hikari.HikariDataSource">
+<property value="oracle.jdbc.driver.OracleDriver" name="driverClassName"/>
+
+<property value="jdbc:oracle:thin:@localhost:1521:xe" name="jdbcUrl"/>
+
+<property value="system" name="username"/>
+
+<property value="satya" name="password"/>
+</bean>
+<!-- inject hikari datasource in dao -->
+<bean id="dao" class="com.nt.dao.EmployeeDaoimpl">
+<constructor-arg ref="hcp"/>
+</bean>
+<!-- inject dao reference to service -->
+<bean id="service" class="com.nt.service.EmployeeServiceimpl">
+<constructor-arg ref="dao"/>
+</bean>
+</beans>

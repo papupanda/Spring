@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<bean id="hcp" class="com.zaxxer.hikari.HikariDataSource">
+<property value="oracle.jdbc.driver.OracleDriver" name="driverClassName"/>
+
+<property value="jdbc:oracle:thin:@localhost:1521:xe" name="jdbcUrl"/>
+
+<property value="system" name="username"/>
+
+<property value="satya" name="password"/>
+</bean>
+<!-- Injection Of Third Party JDBC Connection Pool API Hikari CP Reference into DAO Class Constructor Injection -->
+<bean id="tourdao" class="com.nt.dao.TourismDaoImpl">
+<constructor-arg ref="hcp"/>
+</bean>
+<!-- inject dao class object reference into service class -->
+<bean id="tourservice" class="com.nt.service.Tourismserviceimpl">
+<constructor-arg ref="tourdao"/>
+</bean>
+
+</beans>

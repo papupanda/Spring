@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="PhoneBook_WebApplication_Crud_Operation_Task1">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
+        <property name="context-root" value="PhoneBook_WebApplication_Crud_Operation_Task1"/>
+        <property name="java-output-path" value="/PhoneBook_WebApplication_Crud_Operation_Task1/bin/default"/>
+    </wb-module>
+</project-modules>

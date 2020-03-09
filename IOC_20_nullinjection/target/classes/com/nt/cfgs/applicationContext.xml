@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<bean id="dt" class="java.util.Date">
+<property name="year" value="95"/>
+<property name="month" value="7"/>
+<property name="date" value="17"/>
+
+</bean>
+
+<bean id="dto" class="java.util.Date">
+<property name="year" value="115"/>
+<property name="month" value="8"/>
+<property name="date" value="12"/>
+
+</bean>
+
+
+
+<bean id="per" class="com.nt.beans.Persondetail">
+<constructor-arg value="1"/>
+<constructor-arg value="papu"/>
+<constructor-arg ><null/></constructor-arg>
+<constructor-arg ref="dt"/>
+<constructor-arg ref="dto"/>
+<constructor-arg><null/></constructor-arg>
+</bean>
+</beans>

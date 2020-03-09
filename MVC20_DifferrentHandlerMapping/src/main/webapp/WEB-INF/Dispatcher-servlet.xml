@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- Handler Mapping -->
+	 <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+	<property name="mappings">
+	<props>
+	<prop key="welcome.htm">wc</prop>
+	</props>
+	</property>
+	<property value ="10" name="order"></property>
+	</bean>
+	<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping">
+	<property value="5" name="order"></property>
+	</bean>
+	<!-- controller cfg -->
+	<bean id="wc" class="com.nt.controller.Welcome"></bean>
+	<!-- cfg view Resolver -->
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<property name="prefix" value="WEB-INF/pages/"></property>
+<property name="suffix" value=".jsp"></property>
+</bean>
+</beans>

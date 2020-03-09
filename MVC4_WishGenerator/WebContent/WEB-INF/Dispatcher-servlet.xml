@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<!-- ShowHomeController cnf -->
+<bean id="shc" class="com.nt.controller.ShowHomeController"></bean>
+<bean id="ws" class="com.nt.controller.WishGenerator"></bean>
+<bean id="c" class="com.nt.controller.Contactus"></bean>
+<bean id="ab" class="com.nt.controller.About"></bean>
+<!-- handler mapping confugration -->
+<bean id="sml" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+<property name="mappings">
+<props>
+<prop key="welcome.htm">shc</prop>
+<prop key="wis.htm">ws</prop>
+<prop key="cont.htm">c</prop>
+<prop key="about.htm">ab</prop>
+</props>
+</property>
+</bean>
+<!-- view resolver cnfg -->
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<property name="prefix" value="/WEB-INF/pages/"/>
+<property  name="suffix" value=".jsp"/>
+</bean>
+</beans>

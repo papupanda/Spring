@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- cfg SimpleUrlHandlerMapping -->
+<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+<property name="mappings">
+<props>
+<prop key="home.htm">pvc</prop>
+<prop key="crud.htm">cd</prop>
+</props>
+</property>
+</bean>
+<!-- controller -->
+<bean id="pvc" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+<property name="viewName" value="user"></property>
+</bean>
+<bean id="cd" class="com.nt.controller.CRUDOperation">
+<property name="methodNameResolver">
+<bean class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+<property name="paramName" value="p1"/>
+<property name="defaultMethodName" value="invalid"></property>
+</bean>
+</property>
+</bean>
+
+<!-- cfg view Resolver -->
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<property name="prefix" value="WEB-INF/pages/"></property>
+<property name="suffix" value=".jsp"></property>
+</bean>
+</beans>

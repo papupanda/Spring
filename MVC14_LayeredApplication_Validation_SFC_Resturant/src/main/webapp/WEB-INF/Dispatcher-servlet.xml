@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- cnfg SimpleUrlhandlerMapping -->
+<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+<property name="mappings">
+<props>
+<prop key="home.htm">src</prop>
+</props>
+</property>
+</bean>
+<!-- Cnfg Controller class -->
+<bean id="src" class="com.nt.controller.ResturantController">
+<property name="commandName" value="rstCmd"/>
+<property name="commandClass" value="com.nt.command.ResturantCommand"/>
+<property name="formView" value="resturant"/>
+<property name="successView" value="Show"/>
+<property name="sessionForm" value="true"/>
+<property name="validator" ref="stvalidator"/>
+<constructor-arg ref="service"/>
+
+</bean>
+<!-- cfg Validator class -->
+<bean class="com.nt.validator.ResturantValidator" id="stvalidator">
+</bean>
+<!-- view resolver -->
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<property name="prefix" value="/WEB-INF/pages/"/>
+<property name="suffix" value=".jsp"/>
+</bean>
+<!-- cfg properties file -->
+<bean class="org.springframework.context.support.ResourceBundleMessageSource" id="messageSource">
+<property name="basename" value="com/nt/commons/validation"/>
+
+</bean>
+</beans>

@@ -1,0 +1,17 @@
+SQL>  CREATE TABLE TOURISM611(STATE_CODE NUMBER(15)PRIMARY KEY,STATE_NAME VARCHAR2(12),TOURIST_PLACE VARCHAR2(15),PACKAGE FLOAT,NET_AMT FLOAT);
+
+Table created.
+
+SQL>
+SQL> desc TOURISM611;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ STATE_CODE                                NOT NULL NUMBER(15)
+ STATE_NAME                                         VARCHAR2(12)
+ TOURIST_PLACE                                      VARCHAR2(15)
+ PACKAGE                                            FLOAT(126)
+ NET_AMT                                            FLOAT(126)
+
+SQL> commit;
+
+Commit complete.

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- cfg datasource -->
+<jee:jndi-lookup id="ds" jndi-name="java:/comp/env/Dsjndi"/>
+<!-- cfg JdbcTemplate -->
+<bean id="template" class="org.springframework.jdbc.core.JdbcTemplate">
+<constructor-arg ref="ds"></constructor-arg>
+</bean>
+<!-- Cfg Dao class-->
+<bean id="dao" class="com.nt.dao.ResturantDaoImpl">
+<constructor-arg ref="template"/>
+</bean>
+</beans>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<!-- ShowHomeController cnf -->
+<bean id="vc1" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+<property name="viewName" value="home"></property>
+</bean>
+<bean id="ws" class="com.nt.controller.WishGenerator"></bean>
+<bean id="vc2" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+<property name="viewName" value="contact"></property>
+</bean>
+<bean id="vc3" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+<property name="viewName" value="about"></property>
+</bean>
+
+<!-- handler mapping confugration -->
+<bean id="sml" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+<property name="mappings">
+<props>
+<prop key="welcome.htm">vc1</prop>
+<prop key="wis.htm">ws</prop>
+<prop key="cont.htm">vc2</prop>
+<prop key="about.htm">vc3</prop>
+</props>
+</property>
+</bean>
+<!-- view resolver cnfg -->
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<property name="prefix" value="/WEB-INF/pages/"/>
+<property  name="suffix" value=".jsp"/>
+</bean>
+</beans>

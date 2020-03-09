@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<bean id="adhar" class="com.nt.beans.AdharDetails">
+<property name="id" value="1"/>
+<property name="mobileno" value="9090842709"/>
+<property name="name" value="satya"/>
+<property name="dob" value="10/11/19"/>
+<property name="linkedurl" value="http://url"/>
+<property name="verifies" value="satya"/>
+<property name="gender" value="male"/>
+<property name="single" value="true"/>
+<property name="curency" value="INR"/>
+<property name="favouritejavaclass" value="java.util.Date"/>
+<property name="locale" value="local"></property>
+
+</bean>
+
+</beans>

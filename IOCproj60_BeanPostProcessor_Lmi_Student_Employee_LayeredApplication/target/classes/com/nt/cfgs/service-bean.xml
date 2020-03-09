@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<!-- cnfg bo classes -->
+<bean id="stBo" class="com.nt.bo.StudentBo" scope="prototype">
+</bean>
+<bean id="empbo" class="com.nt.bo.EmployeeBo" scope="prototype">
+</bean>
+<!-- service class cfg -->
+<bean id="nitservice" class="com.nt.service.NITserviceimpl">
+<constructor-arg ref="nitdao"/>
+<lookup-method name="createStudentBo" bean="stBo"/>
+<lookup-method name="createEmployeeBo" bean="empbo"/>
+</bean>
+
+</beans>

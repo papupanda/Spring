@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="MVC12_LayeredApplication_SimpleFromController_Resturant">
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp/web-resources"/>
+        <property name="java-output-path" value="/MVC12_LayeredApplication_SimpleFromController_Resturant/target/classes"/>
+        <property name="context-root" value="MVC13_LayeredApplication_SFC_Resturant_doublePosting"/>
+    </wb-module>
+</project-modules>

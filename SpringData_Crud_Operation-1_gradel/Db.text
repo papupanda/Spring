@@ -1,0 +1,7 @@
+ desc Employee1;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EID                                                NUMBER(10)
+ ENAME                                              VARCHAR2(20)
+ DESG                                               VARCHAR2(25)
+ SALARY                                             FLOAT(126)

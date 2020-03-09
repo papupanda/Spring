@@ -1,0 +1,5 @@
+SQL> desc emplogin;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ USERNAME                                           VARCHAR2(20)
+ PASSWORD                                           VARCHAR2(20)

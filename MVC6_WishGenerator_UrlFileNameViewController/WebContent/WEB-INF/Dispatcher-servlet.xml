@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<!-- ShowHomeController cnf -->
+
+<bean id="ws" class="com.nt.controller.WishGenerator"/>
+<bean id="ufvc" class="org.springframework.web.servlet.mvc.UrlFilenameViewController"></bean>
+<!-- handler mapping confugration -->
+<bean id="sml" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+<property name="mappings">
+<props>
+<prop key="welcome.htm">ufvc</prop>
+<prop key="wis.htm">ws</prop>
+<prop key="contact.htm">ufvc</prop>
+<prop key="about.htm">ufvc</prop>
+</props>
+</property>
+</bean>
+<!-- view resolver cnfg -->
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<property name="prefix" value="/WEB-INF/pages/"/>
+<property  name="suffix" value=".jsp"/>
+</bean>
+</beans>

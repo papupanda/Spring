@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="ce" class="com.nt.beans.CheckEligibility" init-method="myint" destroy-method="mydestroy">
+<property name="name" value="satya"/>
+<property name="addres" value="kendrapara"/>
+<property name="age" value="20"/>
+</bean>
+
+</beans>

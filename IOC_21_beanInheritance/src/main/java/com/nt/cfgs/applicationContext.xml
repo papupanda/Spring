@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+ 
+ <bean id="basepulsor" class="com.nt.beans.Bike" abstract="true">
+ <property name="bikecompany" value="bajaj"/>
+ <property name="bikeengine" value="firstengine"/>
+ <property name="biketankoil" value="15"/>
+ <property name="bikecolor" value="red"/>
+ </bean>
+ <bean id="pulsor" class="com.nt.beans.Bike" parent="basepulsor">
+ <property name="bikeno" value="0987hfgg"/>
+ <property name="bikename" value="pulsor"/>
+ <property name="bikecc" value="250"/>
+ </bean>
+
+<bean id="pulsor1" class="com.nt.beans.Bike" parent="basepulsor">
+ <property name="bikeno" value="gg5433hfgg"/>
+ <property name="bikename" value="pulsor"/>
+ <property name="bikecc" value="300"/>
+ <property name="bikecolor" value="black"></property>
+ </bean>
+</beans>

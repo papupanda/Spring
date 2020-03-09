@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<bean id="st" class="com.nt.student.Student">
+<property name="mark">
+<array>
+<value>100</value>
+<value>200</value>
+<value>300</value>
+</array>
+</property>
+<property name="date">
+<array>
+<ref bean="dao"/>
+<ref bean="dto"/>
+</array>
+</property>
+
+</bean>
+<!-- date class config -->
+<bean id="dao" class="java.util.Date">
+<property name="year" value="96"/>
+<property name="month" value="5"/>
+<property name="date" value="17"/>
+</bean>
+
+<bean id="dto" class="java.util.Date">
+<property name="year" value="115"/>
+<property name="month" value="5"/>
+<property name="date" value="18"/>
+</bean>
+<bean id="university" class="com.nt.university.University">
+<property name="course">
+<list>
+<value>MBA</value>
+<value>MCA</value>
+<value>BTECH</value>
+<value>Bsc</value>
+</list>
+</property>
+</bean>
+<!-- student info class injection -->
+<bean id="stu" class="com.nt.info.Studentinfo">
+<property name="phonenumber">
+<set>
+<value>9090842709</value>
+<value>3849044040</value>
+<value>4948585959</value>
+</set>
+</property>
+<property name="date">
+<set>
+<ref bean="dao"/>
+<ref bean="dto"/>
+</set>
+</property>
+</bean>
+<!-- config Faculty class -->
+<bean id="fc" class="com.nt.faculty.Faculty">
+<property name="facultySubject">
+<map>
+<entry key="hari" value="corejava"/>
+<entry>
+<key><value>murali</value></key>
+<value>oracle</value>
+</entry>
+<entry key="natarj">
+<value>spring,hibernate</value>
+</entry>
+</map>
+</property>
+<property name="impDate">
+<map>
+<entry key="currentdate" value-ref="dao"/>
+<entry><key><value>Dob</value></key>
+<ref bean="dto"/>
+</entry>
+</map>
+</property>
+</bean>
+<bean id="emp" class="com.nt.emp.EmployeeProfile">
+<constructor-arg>
+<props>
+<prop key="Anil">clerk</prop>
+<prop key="sunil">clerk</prop>
+<prop key="rama">engineer</prop>
+</props>
+</constructor-arg>
+</bean>
+
+</beans>

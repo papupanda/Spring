@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: "dev"
+---
+
+spring:
+   profiles: dev
+   
+   datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: system
+    password: satya
+    

@@ -1,0 +1,13 @@
+SQL> select *from users;
+
+UNAME                PWD                      STATUS
+-------------------- -------------------- ----------
+raja                 {noop}rani                    1
+rama                 {noop}sita                    1
+
+SQL> select *from user_roles;
+
+    ROLEID UNAME                ROLE
+---------- -------------------- --------------------
+       101 raja                 ROLE_PASSENGER
+       101 rama                 ROLE_EMPLOYEE

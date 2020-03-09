@@ -1,0 +1,16 @@
+SQL> create table emp_crud(id number(10),name varchar2(25),salary number,designation varchar2(25));
+
+Table created.
+
+SQL> commit
+  2  ;
+
+Commit complete.
+
+SQL> desc emp_crud;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                                 NUMBER(10)
+ NAME                                               VARCHAR2(25)
+ SALARY                                             NUMBER
+ DESIGNATION                                        VARCHAR2(25)

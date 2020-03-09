@@ -1,0 +1,10 @@
+SQL> desc patient_info;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PNO                                       NOT NULL NUMBER(10)
+ PATIENTNAME                                        VARCHAR2(20)
+ AGE                                                NUMBER(10)
+ ADDRS                                              VARCHAR2(20)
+ PROBLEM                                            VARCHAR2(15)
+ WARDNO                                             NUMBER(10)
+ DOCTOR                                             VARCHAR2(15)

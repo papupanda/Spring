@@ -1,0 +1,17 @@
+SQL> create table PhoneBook(sno number,name varchar(20),email varchar(25),phonenumber number);
+
+Table created.
+
+SQL> desc phonebook;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SNO                                                NUMBER
+ NAME                                               VARCHAR2(20)
+ EMAIL                                              VARCHAR2(25)
+ PHONENUMBER                                        NUMBER
+
+SQL> commit;
+
+Commit complete.
+
+SQL>

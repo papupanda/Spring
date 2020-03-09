@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+ <bean id="st" class="com.nt.student.Student">
+ <constructor-arg value="1001" type="int" />
+ <constructor-arg value="raja" type="java.lang.String"/>
+ <constructor-arg value="89.4f" type="float"/>
+ 
+ 
+ </bean>
+ <bean id="m" class="com.nt.mark.Mark">
+ <constructor-arg value="30" index="2"/>
+ <constructor-arg value="20" index="1"/>
+ <constructor-arg value="10" index="0"/>
+ 
+ </bean>
+ 
+ 
+
+</beans>

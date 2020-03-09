@@ -1,0 +1,12 @@
+  desc jobseeker;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ NO                                        NOT NULL NUMBER(10)
+ NAME                                               VARCHAR2(20)
+ ADDRS                                              VARCHAR2(20)
+ AGE                                                FLOAT(10)
+ SKILL                                              VARCHAR2(10)
+ EXPERIENCE                                         FLOAT(10)
+ LOCATION                                           VARCHAR2(10)
+ EXCEPTEDSALARY                                     FLOAT(10)
+

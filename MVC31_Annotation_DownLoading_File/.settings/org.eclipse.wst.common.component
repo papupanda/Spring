@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="MVC31_Annotation_DownLoading_File">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
+        <property name="context-root" value="MVC31_Annotation_DownLoading_File"/>
+        <property name="java-output-path" value="/MVC31_Annotation_DownLoading_File/bin/default"/>
+    </wb-module>
+</project-modules>
